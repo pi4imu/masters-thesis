@@ -1,0 +1,26 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mipt-thesis-biblatex}[2014/06/19 Some settings for Biblatex]
+
+\RequirePackage[backend=biber,language=english,
+  autolang=other, bibstyle=mipt-thesis, citestyle= authoryear, uniquelist=false]{biblatex}
+%https://www.overleaf.com/learn/latex/Biblatex_citation_styles
+\renewcommand{\finalnamedelim}{, }
+\defbibheading{bibliography}[\refname]{%
+    \chapter*{#1}%
+    \markboth{#1}{#1}%
+}
+
+% Shorthand for printing bibliography and adding it to TOC
+\newcommand{\printbib}{%
+    \addcontentsline{toc}{chapter}{\bibname}%
+    \printbibliography%
+}
+
+\newcommand\apj{ApJ}
+\newcommand\apjl{ApJL}
+\newcommand\aap{A{\&}A}
+\newcommand\mnras{MNRAS}
+\newcommand\aapr{A{\&}AR}
+\newcommand\nat{Nature}
+\newcommand\prl{Phys. Rev. Lett.}
+\newcommand\jcap{JCAP}

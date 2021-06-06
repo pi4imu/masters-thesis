@@ -1,0 +1,97 @@
+\documentclass{mipt-thesis-ms}
+\usepackage{mipt-thesis-biblatex}
+\addbibresource{bibliography.bib}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\numberwithin{equation}{chapter}
+\hypersetup{colorlinks=false}
+\usepackage{float}
+\usepackage{url}
+%\setlength\parindent{0pt}
+%\pagestyle{plain}
+\usepackage{xcolor}
+
+\newcommand{\nl}[1]{\textcolor{blue}{NL: #1}}
+\begin{document}
+
+\title{Оценка точности измерения постоянной Хаббла на основе наблюдений гравитационно линзированной сверхновой SN Refsdal}
+\author{Круглов А.\ А.}
+\supervisor{к.ф.-м.н. Лыскова Н.\ С.}
+\referee{Имя Отчество}
+\groupnum{582}
+%\faculty{Физтех-школа Фундаментальной и Прикладной Физики}
+%\department{Кафедра космической физики}
+
+\frontmatter
+
+\mainmatter
+
+\pagenumbering{arabic}
+\titlecontents 
+
+
+\chapter{Введение (убрать дробление)}
+\input{intro/intro_revised}
+%\section{Обзор литературы}
+%\input{intro/obzor}
+%\section{Продолжение обзора}
+%\input{intro/about}
+\section{Цели и задачи научной работы}
+\input{intro/tasks}
+
+
+
+
+\chapter{Теоретическое введение (вынести в приложение? -- \textbf{ я бы оставила})}
+
+\section{Общие сведения о гравитационном линзировании}
+\input{theory/gravlensing}
+\section{Формирование нескольких изображений}
+\input{theory/timedelays}
+
+\chapter{Вычисление постоянной Хаббла по данным наблюдений SN Refsdal}
+
+\section{Общие сведения о SN Refsdal}
+\input{hubbleconstant/snrefsdal}
+\section{Временные задержки и коэффициенты усиления}
+\input{hubbleconstant/dtdm}
+\section{Метод}
+\input{hubbleconstant/method}
+\section{Результаты}
+\input{hubbleconstant/results}
+
+\chapter{Микролинзирование}
+
+\section{Общие сведения о микролинзировании}
+\input{microlensing/general}
+\section{Программа \texttt{microlens}}
+\input{microlensing/microlens}
+\section{Оценки $\kappa_*, \kappa_c$ и $\gamma$ для изображений SN Refsdal - в приложение?}
+\input{microlensing/rough_estimates}
+\section{Как я делал свои карты и сворачивал их с источником}
+\section{Как это всё обсчитывалось в \tt{emcee}}
+\section{Гистограммы, результаты, неучтенные вещи}
+
+
+
+
+%\section{Влияние микролинзирования на кривые блеска}
+%\input{impact/impact_on_lightcurves}
+%\section{Влияние микролинзирования на определение временных задержек}
+%\input{impact/timedelays}
+%\section{Анализ и результаты}
+%\input{impact/results}
+
+%\chapter{Заключение}
+%    \input{output/conclusion}
+
+\backmatter
+
+\printbib
+
+%\newpage
+%\section*{Приложение}
+%аываывалываодопрывап
+
+\end{document}
