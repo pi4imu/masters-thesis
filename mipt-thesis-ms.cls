@@ -7,7 +7,7 @@
 }
 \ProcessOptions\relax
 
-\LoadClass[a4paper,12pt]{book}
+\LoadClass[a4paper,12pt, openany]{book}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Useful packages %%%%%
@@ -59,7 +59,7 @@
 %\renewcommand\partname{Часть}
 %\renewcommand\chaptername{Глава}
 %\renewcommand\appendixname{Приложение}
-
+\renewcommand{\headrulewidth}{0pt}
 
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
@@ -189,9 +189,9 @@
 \newcommand{\supervisor}[1]{\def\mtsupervisortext{#1}}
 \newcommand{\referee}[1]{\def\mtrefereetext{#1}}
 
-\newcommand{\addemptypage}{%
-    \clearpage \mbox{} \clearpage
-}
+%\newcommand{\addemptypage}{%
+%    \clearpage \mbox{} \clearpage
+%}
 
 \renewcommand{\titlepage}{%
     \pagestyle{empty}
@@ -238,19 +238,6 @@
     \end{center}
     
     \newpage
-}
-
-\newcommand{\titlecontents}{
-    \titlepage
-    
-    
-    \section*{Аннотация}
-    \input{intro/relevance}
-    \newpage
-    %\input{intro/fitting.tex}
-    \tableofcontents
-    \pagestyle{miptthesis}
-    %\setcounter{page}{2}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

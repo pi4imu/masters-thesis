@@ -18,34 +18,34 @@
 \title{Оценка точности измерения постоянной Хаббла на основе наблюдений гравитационно линзированной сверхновой SN Refsdal}
 \author{Круглов А.\ А.}
 \supervisor{к.ф.-м.н. Лыскова Н.\ С.}
-\referee{Имя Отчество}
+\referee{к.ф.-м.н. Человеков И.В.}
 \groupnum{582}
 %\faculty{Физтех-школа Фундаментальной и Прикладной Физики}
 %\department{Кафедра космической физики}
 
 \frontmatter
-
 \mainmatter
 
-\pagenumbering{arabic}
-\titlecontents 
+%\pagenumbering{arabic}
 
+\titlepage
 
-\chapter{Введение (убрать дробление)}
+\newpage
+\input{intro/abstract}
+\newpage
+\input{intro/acknowledgements}
+
+\newpage
+\tableofcontents
+
+\pagestyle{miptthesis}
+
+\chapter{Введение}
 \input{intro/intro_revised}
-%\section{Обзор литературы}
-%\input{intro/obzor}
-%\section{Продолжение обзора}
-%\input{intro/about}
-\section{Цели и задачи научной работы}
-\input{intro/tasks}
 
+\chapter{Гравитационное линзирование}
 
-
-
-\chapter{Теоретическое введение (вынести в приложение? -- \textbf{ я бы оставила})}
-
-\section{Общие сведения о гравитационном линзировании}
+\section{Общие сведения}
 \input{theory/gravlensing}
 \section{Формирование нескольких изображений}
 \input{theory/timedelays}
@@ -61,38 +61,29 @@
 \section{Результаты}
 \input{hubbleconstant/results}
 
-\chapter{Микролинзирование}
+\chapter{Микролинзирование}\label{ch:micro}
 
 \section{Общие сведения о микролинзировании}
 \input{microlensing/general}
-\section{Программа \texttt{microlens}}
-\input{microlensing/microlens}
-\section{Оценки $\kappa_*, \kappa_c$ и $\gamma$ для изображений SN Refsdal - в приложение?}
+\section*{Оценки $\kappa_*, \kappa_c$ и $\gamma$ для изображений SN Refsdal}
 \input{microlensing/rough_estimates}
-\section{Как я делал свои карты и сворачивал их с источником}
-\input{impact/maps}
-\section{Как это всё обсчитывалось в \tt{emcee}}
-\section{Гистограммы, результаты, неучтенные вещи}
+\section{Карты усилений}
+\input{microlensing/maps}
+\section{Учёт протяженности источника}
+\input{microlensing/spatial}
+\section{Влияние микролинзирования на кривые блеска SN Refsdal}
+\input{microlensing/fitting}
+\section{Обсуждение}
+\input{microlensing/results}
 
-
-
-
-%\section{Влияние микролинзирования на кривые блеска}
-%\input{impact/impact_on_lightcurves}
-%\section{Влияние микролинзирования на определение временных задержек}
-%\input{impact/timedelays}
-%\section{Анализ и результаты}
-%\input{impact/results}
-
-%\chapter{Заключение}
-%    \input{output/conclusion}
+\chapter{Заключение}
+\input{intro/conclusion}
 
 \backmatter
 
 \printbib
 
 %\newpage
-%\section*{Приложение}
-%аываывалываодопрывап
+%\chapter{Приложение}\label{appendix}
 
 \end{document}

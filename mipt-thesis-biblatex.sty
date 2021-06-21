@@ -1,9 +1,25 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{mipt-thesis-biblatex}[2014/06/19 Some settings for Biblatex]
 
-\RequirePackage[backend=biber,language=english,
-  autolang=other, bibstyle=mipt-thesis, citestyle= authoryear, uniquelist=false]{biblatex}
+\RequirePackage[backend=biber,
+                language=english,
+                autolang=other,
+                bibstyle=mipt-thesis,
+                citestyle=authoryear, 
+                uniquelist=false
+                ]{biblatex}
+                
+\AtEveryBibitem{
+    \clearfield{doi}
+    \clearfield{arXiv}
+    \clearfield{eprint}
+    \clearfield{month}
+    \clearfield{eid}
+    %\clearfield{title}
+}
+                
 %https://www.overleaf.com/learn/latex/Biblatex_citation_styles
+
 \renewcommand{\finalnamedelim}{, }
 \defbibheading{bibliography}[\refname]{%
     \chapter*{#1}%
@@ -24,3 +40,5 @@
 \newcommand\nat{Nature}
 \newcommand\prl{Phys. Rev. Lett.}
 \newcommand\jcap{JCAP}
+\newcommand\apjs{ApJS}
+\newcommand\pasp{PASP}
